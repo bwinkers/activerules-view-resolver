@@ -1,0 +1,40 @@
+{
+  "name": "activerules-view-resolver",
+  "version": "0.1.0",
+  "description": "A view Resolver for Loopback and Express apps. It relies on site data loaded through activerules-middleware.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nyc --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwinkers/activerules-view-resolver.git"
+  },
+  "keywords": [
+    "activerules",
+    "view-resolver",
+    "loopback",
+    "handlebars",
+    "views"
+  ],
+  "author": "Brian Winkers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwinkers/activerules-view-resolver/issues"
+  },
+  "homepage": "https://github.com/bwinkers/activerules-view-resolver#readme",
+    "devDependencies": {
+    "chai": "^4.1.1",
+    "coveralls": "^2.13.1",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
+    "sinon": "^3.2.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  }
+}
