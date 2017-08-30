@@ -11,6 +11,8 @@ var thisDirectory = __dirname;
 // Our test data is in a sub-directory of the test directory
 var arRoot = thisDirectory + '/data/';
 
+var site = { site: 'example' };
+
 // Describe what we expect from the module
 describe('Module - activerules-view-resolver', function() {
   
@@ -18,10 +20,10 @@ describe('Module - activerules-view-resolver', function() {
   describe('Given a site with a home page override', function() {
     it('the site home page path is returned.', function () {
       // Determine which view to load for the site
-      viewResolver.page(site, 'home')
+      viewResolver.page(arRoot, 'home', site)
       .then(function(pagePath) {
         console.log(pagePath);
-        expect(pagePath).to.equal(arRoot + 'site/' + site.site + '/example/view/home.hbs');
+        expect(pagePath).to.equal(arRoot + 'site/' + site.site + '/view/page/home.hbs');
       })
     });
   });
@@ -30,10 +32,10 @@ describe('Module - activerules-view-resolver', function() {
   describe('Given a site without a faq page override', function() {
     it('the default faq page path is returned.', function () {
       // Determine which view to load for the site
-      viewResolver.page(site, 'home')
+      viewResolver.page(arRoot, 'faq', site)
       .then(function(pagePath) {
         console.log(pagePath);
-        expect(pagePath).to.equal(arRoot + 'site/' + site.site + '/default/view/faq.hbs');
+        expect(pagePath).to.equal(arRoot + 'site/default/view/page/faq.hbs');
       })
     });
   });
