@@ -9,3 +9,5 @@
 
 A view Resolver for Loopback and Express apps. It relies on site data loaded through activerules-middleware.
 It allows sites to override the default view at both the page and component level.
+
+Check back soon...
