@@ -29,7 +29,7 @@ AR.prototype.view = function (arRoot, view, site) {
 
           pathExists(sitePath)
           .then(exists => {
-              if(exists) {
+              if(exists === true) {
                  resolve(sitePath);
               } else {
                 resolve(defaultPath);
