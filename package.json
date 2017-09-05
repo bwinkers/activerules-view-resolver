@@ -1,6 +1,6 @@
 {
   "name": "activerules-view-resolver",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A view Resolver for Loopback and Express apps. It relies on site data loaded through activerules-middleware.",
   "main": "index.js",
   "directories": {

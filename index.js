@@ -25,15 +25,15 @@ AR.prototype.view = function (arRoot, view, site) {
           
           var sitePath = arRoot +  'site/' +  site.site + '/view/' + view + '.marko';  
  
-          var defaultPath = arRoot +  'site/default/view/' + view + '.marko';
+          var appPath = arRoot +  'site/default/view/' + view + '.marko';
 
           pathExists(sitePath)
           .then(exists => {
               if(exists === true) {
-                 resolve(sitePath);
-              } else {
-                resolve(defaultPath);
+                appPath = sitePath;
               }
+              
+              resolve(appPath);
           });
       }
     );
