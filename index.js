@@ -2,7 +2,6 @@
 
 /**
  *  This module determines if a site override view exists.
- *  The the site elve file exists we will use it later in Handlebars.
  */
 
 const Promise = require("bluebird");
@@ -29,7 +28,7 @@ AR.prototype.view = function (arRoot, view, site) {
 
           pathExists(sitePath)
           .then(exists => {
-              if(exists === true) {
+              if(exists) {
                 appPath = sitePath;
               }
               
