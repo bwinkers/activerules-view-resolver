@@ -18,14 +18,14 @@ var AR = function () {};
  * @param string page
  * @returns {nm$_index.Promise}
  */
-AR.prototype.page = function (arRoot, page, site) {
+AR.prototype.view = function (arRoot, view, site) {
     
     return new Promise(
         function (resolve, reject) {
           
-          var sitePath = arRoot +  'site/' +  site.site + '/view/page/' + page + '.hbs';  
-          
-          var defaultPath = arRoot +  'site/default/view/page/' + page + '.hbs';
+          var sitePath = arRoot +  'site/' +  site.site + '/view/' + view + '.marko';  
+ 
+          var defaultPath = arRoot +  'site/default/view/' + view + '.marko';
 
           pathExists(sitePath)
           .then(exists => {

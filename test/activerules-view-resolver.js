@@ -20,10 +20,10 @@ describe('Module - activerules-view-resolver', function() {
   describe('Given a site with a home page override', function() {
     it('the site home page path is returned.', function () {
       // Determine which view to load for the site
-      viewResolver.page(arRoot, 'home', site)
+      viewResolver.view(arRoot, 'pages/home', site)
       .then(function(pagePath) {
         console.log(pagePath);
-        expect(pagePath).to.equal(arRoot + 'site/' + site.site + '/view/page/home.hbs');
+        expect(pagePath).to.equal(arRoot + 'site/' + site.site + '/view/pages/home.marko');
       })
     });
   });
@@ -32,10 +32,10 @@ describe('Module - activerules-view-resolver', function() {
   describe('Given a site without a faq page override', function() {
     it('the default faq page path is returned.', function () {
       // Determine which view to load for the site
-      viewResolver.page(arRoot, 'faq', site)
+      viewResolver.view(arRoot, 'pages/faq', site)
       .then(function(pagePath) {
         console.log(pagePath);
-        expect(pagePath).to.equal(arRoot + 'site/default/view/page/faq.hbs');
+        expect(pagePath).to.equal(arRoot + 'site/default/view/pages/faq.marko');
       })
     });
   });
