@@ -6,6 +6,8 @@
 [![Coverage Status](https://img.shields.io/coveralls/bwinkers/activerules-view-resolver.svg)](https://coveralls.io/github/bwinkers/activerules-view-resolver)
 [![Dependency Status](https://img.shields.io/david/bwinkers/activerules-view-resolver.svg?label=deps)](https://david-dm.org/bwinkers/activerules-view-resolver)
 [![devDependency Status](https://img.shields.io/david/dev/bwinkers/activerules-view-resolver.svg?label=devDeps)](https://david-dm.org/bwinkers/activerules-view-resolver#info=devDependencies)
+[![Known Vulnerabilities](https://snyk.io/test/github/bwinkers/activerules-view-resolver/badge.svg)](https://snyk.io/test/github/bwinkers/activerules-view-resolver)
+
 
 A view Resolver for Loopback and Express apps. It relies on site data loaded through activerules-middleware.
 It allows sites to override the default view at both the page and component level.
